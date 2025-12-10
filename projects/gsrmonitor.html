@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GSRmonitor: A validation platform for a Galvanic Skin Response (GSR) SoC for real time stress and fear monitoring in high risk situations">
+  <meta name="author" content="Alex Lopez">
+  <title>GSRmonitor - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">GSRmonitor</h1>
+        <p class="lead text-muted">A validation platform for the HEEPidermis <a href="#references" class="text-decoration-none">[1]</a> Galvanic Skin Response (GSR) SoC for real time stress and fear monitoring in high risk environments.</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/GSRmonitor.png"
+               alt="GSRmonitor board render"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>GSRmonitor is a discrete validation platform for HEEPidermis <a href="#references" class="text-decoration-none">[1]</a>, a low power SoC for Galvanic Skin Response (GSR) measurents for physiological stress and fear monitoring in high-risk environments, developed at the Embedded Systems Laboratory (ESL) at EPFL. The board was designed to emulate the analog front-end and data acquisition concepts behind the SoC before it was integrated into a custom silicon and taped out.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">System Architecture</h3>
+
+            <p>The analog front end is centered around a 16-bit current DAC that can sink programmable excitation currents from 40 nA up to 10 μA. A set of on board loads allows the user to validate the iDAC and readout chain, including an 8-bit 100 kΩ digital rheostats, three fixed precision resistors (100 kΩ, 470 kΩ and 1 MΩ) and three rheostats (100 kΩ, 500 kΩ and 2 MΩ). These can be selected using the on-board DIP switches, as shown in <a href="#figure-1" class="text-decoration-none">Figure 1</a>. For actual measurements, the same excitation path can be routed to external electrodes through dedicated connectors.</p>
+            
+            <!-- GSRmonitor pinout -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/GSRmonitor/GSRmonitor_pinout.svg"
+                  alt="Figure 1: GSRmonitor pinout diagram"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="max-width: 80%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 1: GSRmonitor pinout diagram.</small>
+                </p>
+              </div>
+            </div>
+
+            <p>On the acquisition side, two externally controlled sample-and-hold stages can be used to emulate a level-crossing ADC, used in the SoC for ultra-low-power operation. A regular 12 bit sigma-delta ADC can also be used for more traditional continuous sampling if needed.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Power and Interface</h3>
+            <p>Because GSR signals are small and highly sensitive to noise, particular care was taken in the power tree. The board can be powered either from an external LiPo/Li-Ion battery pack or from a bench power supply. An integrated charger with load-sharing allows the system to run while the battery is charging. Downstream, two high PSRR, low noise LDOs followed by additional filtering stages provide clean power rails for the current source and ADC front-end.</p>
+
+            <p>On the digital side, GSRmonitor communicates over I<sup>2</sup>C and supports logic levels between 1.65 V and 5.5 V, which makes it compatible with most microcontrollers and SoCs used in the market. The <a href="https://github.com/esl-epfl/GSR_monitor" class="text-decoration-none" target="_blank" rel="noopener">Github repository</a> includes an microcontroller-agnostic library and example sketches that allow for an easy bring-up.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- References Section -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div id="references" class="mt-5 pt-4 border-top">
+            <h3 class="h4 fw-bold mb-3">References</h3>
+            <p class="mb-3">
+              [1] J. Sapriza et al., "HEEPidermis: a versatile SoC for BioZ recording," <em>arXiv preprint arXiv:2509.04528</em>, 2025. [Online]. Available: <a href="https://arxiv.org/abs/2509.04528" target="_blank" class="text-decoration-none">https://arxiv.org/abs/2509.04528</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

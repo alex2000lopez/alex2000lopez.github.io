@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WearEIT: An EIT-based wearable device for real-time hand gesture recognition and control of upper-limb prostheses">
+  <meta name="author" content="Alex Lopez">
+  <title>WearEIT - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">WearEIT</h1>
+        <p class="lead text-muted">An EIT-based wearable device for real-time hand gesture recognition and control of upper-limb prostheses</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/WearEIT.png"
+               alt="WearEIT"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>WearEIT explores Electrical Impedance Tomography (EIT) as a viable alternative to electromyography (EMG) for real-time hand gesture recognition and control of upper limb prostheses.</p>
+
+            <p>Conventional myoelectric prostheses rely on EMG, a passive biosignal technique that measures the electrical activity generated when muscles contract using surface electrodes. While this approach is widely adopted, it has several important limitations. For instance, EMG only captures the transient activity of muscles that are contracting, so it provides little information about the state of muscles that are mainly under constant tension. On top of that, EMG signals have low amplitude and share a similar magnitude with mechanical vibrations and motion related noise, especially at the skin electrode interface. In practice, this means EMG primarily picks up superficial, localized activity and offers limited information about how deeper or adjacent muscle groups behave as a whole. As a result, EMG-based prostheses are highly susceptible to mains interference at 50 or 60 Hz, motion artifacts, and even changes in ambient humidity.</p>
+
+            <p>WearEIT addresses these limitations by using EIT, a non-invasive active biosignal technique that measures changes in muscle bioimpedance by injecting AC currents into the limb and measuring the resulting surface voltage changes. Because the excitation frequency can be selected and adjusted, EIT can be made more robust to motion artifacts and electrical noise than traditional EMG.</p>
+
+            <!-- Approach Image -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/WearEIT/adjacent_method_animation.gif"
+                      alt="Figure 1: Current injection and voltage measurement using the tetrapolar/adjacent method"
+                      class="img-fluid rounded shadow"
+                      style="max-width: 70%;">
+                <p class="text-muted mt-3 mb-0"><small>Figure 1: Current injection and voltage measurement using the tetrapolar/adjacent method.</small></p>
+              </div>
+            </div>
+
+            <p>When applied to a residual limb, EIT provides a 2D cross sectional conductivity map, or even 3D if multiple electrode layers are used, offering a more complete and detailed picture of the residual limb's anatomy and function, as depicted in <a href="#figure-2" class="text-decoration-none">Figure 2</a>. These maps capture how the remaining muscles, bones, and connective tissue in the residual limb move and contract in patterns that reflect the user’s intended arm and hand movements. By learning a mapping between these EIT patterns and target actions with a machine learning model, WearEIT allows for intuitive real-time control of upper limb prosthetic devices.</p>
+
+            <!-- Conductivity map Image -->
+            <div id="figure-2" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/WearEIT/eidors_conductivity_map_example.png"
+                      alt="Figure 2: Example of a conductivity map of a residual limb obtained using EIDORS software"
+                      class="img-fluid rounded shadow"
+                      style="max-width: 35%;">
+                <p class="text-muted mt-3 mb-0"><small>Figure 2: Example of a conductivity map of a residual limb obtained using <a href="https://eidors3d.sourceforge.net/" target="_blank" class="text-decoration-none">EIDORS</a> software.</small></p>
+              </div>
+            </div>
+              
+            <h3 class="h4 fw-bold mt-5 mb-3">System Architecture
+            </h3>
+            <p>WearEIT is implemented as a wearable device for the residual limb. The system uses a high-performance STM32H7 microcontroller, which enables on-device machine learning inference, decoupling the system from a PC and resulting in a portable, self-contained solution. An external HC-06 Bluetooth module provides wireless data streaming which, combined with a custom MATLAB-based GUI, allows for real-time off-device training and tuning of the machine learning model.</p>
+            
+            <p>On the analog side, the proposed system consists of four main components:</p>
+            <ul>
+              <li>A DDS-based AC current generator that can be programmed to output AC-coupled sinusoidal currents with frequencies up to 1 MHz.</li>
+              <li>A discretely implemented Voltage-Controlled Current Source (VCCS) based on a Howland topology, supporting both single-ended and differential current injection in the range of 70 µA to 350 µA via external digital potentiometers.</li>
+              <li>A set of analog multiplexers that select different electrodes for current injection and voltage measurement across up to 16 channels.</li>
+              <li>An analog front-end that filters and amplifies the electrode voltage signals, using digital potentiometers to maximize SNR, followed by a 12-bit ADC sampling at 10 MHz.</li>
+            </ul>
+            
+            <p>The device also implements an autocalibration procedure that adjusts the analog gain to maximize the SNR of the electrode voltage signals and prevent ADC saturation.</p>
+            
+            <!-- Block diagram Image -->
+            <div id="figure-3" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/WearEIT/system_block_diagram.svg"
+                  alt="Figure 3: Block diagram of the WearEIT wearable device"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3: Block diagram of the WearEIT wearable device.</small>
+                </p>
+              </div>
+            </div>
+            
+            <h3 class="h4 fw-bold mt-5 mb-3">Implementation</h3>
+
+            <p>In order to allow for a more versatile and scalable implementation, the system was implemented in a modular fashion, separating the analog section and the digital section into two separate PCBs, and thus allowing for different electrode configurations, without the need to redesign the entire system. The two boards snap together using three low-profile connectors, allowing for easy assembly and disassembly of the system.</p>
+
+            <!-- Digital and analog boards Image -->
+<!--             <div id="figure-3" class="row g-4 my-5">
+              <div class="col-md-6 text-center">
+                <img
+                  src="../assets/images/projects/WearEIT/digital_board_front_no_bg.png"
+                  alt="Figure 3a: Front view of the digital board"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3a: Front view of the digital board.</small>
+                </p>
+              </div>
+              <div class="col-md-6 text-center">
+                <img
+                  src="../assets/images/projects/WearEIT/analog_board_front_no_bg.png"
+                  alt="Figure 3b: Front view of the analog board"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3b: Front view of the analog board.</small>
+                </p>
+              </div>
+            </div> -->
+
+            <!-- Assembly Image -->
+            <div id="figure-4" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/WearEIT/board_assembly.jpeg"
+                  alt="Figure 4: Assembly of the WearEIT wearable device"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="max-width: 80%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 4: Assembly of the WearEIT wearable device.</small>
+                </p>
+              </div>
+            </div>
+
+            <p>In order to train the machine learning model, we used a MATLAB-based GUI, shown in <a href="#figure-5" class="text-decoration-none">Figure 5</a>, which supports real-time data acquisition, off-device model training, and ML model parameter tuning.</p> 
+              
+            <p>Once a Bluetooth connection is established between the PC and the WearEIT device, the system streams raw measurements to the PC, where the data are processed and the model is trained and tuned. After training, the learned weights are sent back to the device and stored on a microSD card. On power-up, the device automatically loads these weights from the microSD card into RAM, enabling fully on-device inference. Thanks to the CMSIS DSP Software Library, each inference takes less than 200 μs, so its contribution to the overall frame time is very small compared to data acquisition. For a tetrapolar/adjacent configuration, the system needs N<sub>electrodes</sub>(N<sub>electrodes</sub> − 3) RMS voltages per frame (208 when N<sub>electrodes</sub> = 16), and several periods of the input signal are required to accurately compute each RMS value. As a result, the limiting factor for the recognition rate is the EIT measurement process rather than the neural network itself, leaving substantial headroom to increase the model complexity without significantly degrading the frame rate.</p>
+
+            <p>The model itself is implemented as a feedforward neural network with one hidden layer with 25 neurons, which maps the RMS voltages from a single frame to N different classes chosen by the user. After training, the GUI shows the final confusion matrix, the obtained accuracy, and a plot of the training loss over epochs.</p>
+
+
+            <!-- MATLAB-based GUI Image -->
+            <div id="figure-5" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/WearEIT/matlab_interface.png"
+                  alt="Figure 5: MATLAB-based GUI for the WearEIT wearable device"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="max-width: 80%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 5: MATLAB-based GUI for the WearEIT wearable device.</small>
+                </p>
+              </div>
+            </div>
+            
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Key Findings</h3>
+            <p>Using the tetrapolar/adjacent electrode configuration shown in <a href="#figure-1" class="text-decoration-none">Figure 1</a> with 16 electrodes, the proposed system achieves a 54 Hz recognition/frame rate, <strong>improving on the 16 Hz frame rate reported by Zhang et al. <a href="#references" class="text-decoration-none">[1]</a></strong> under a similar configuration. The system also <strong>reaches a recognition accuracy of 90.46%</strong> for 10 different body conductivity patterns, as shown in <a href="#figure-6" class="text-decoration-none">Figure 6</a>.</p>
+            
+            <p><strong>Disclaimer:</strong> Although the hardware and processing pipeline were verified to operate as intended, limitations in collecting sufficient in-house data for generalizable training and testing meant that the results in <a href="#figure-6" class="text-decoration-none">Figure 6</a> are based on an open-source dataset provided by the authors of Fernandez-Fuentes et al. <a href="#references" class="text-decoration-none">[2]</a>. This dataset contains more than 3000 tetrapolar/adjacent measurements acquired using phantoms of different shapes and sizes. Since the data were not originally labeled, K-means was used to cluster the measurements and a subset of clusters was used to train the on device model. The reported frame rate includes both the data acquisition time and the model inference time.</p>           
+
+            <!-- Confusion matrix Image -->
+            <div id="figure-6" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/WearEIT/confusion_matrix_wearEIT.svg"
+                      alt="Figure 6: Confusion matrix of the WearEIT wearable device"
+                      class="img-fluid rounded shadow"
+                      style="max-width: 60%;">
+                <p class="text-muted mt-3 mb-0"><small>Figure 6: Confusion matrix of the WearEIT wearable device.</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- References Section -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div id="references" class="mt-5 pt-4 border-top">
+            <h3 class="h4 fw-bold mb-3">References</h3>
+            <p class="mb-3">
+              [1] Y. Zhang, R. Xiao, and C. Harrison, "Advancing Hand Gesture Recognition with High Resolution Electrical Impedance Tomography," in <em>Proc. 29th Annu. Symp. User Interface Softw. Technol.</em>, Tokyo, Japan, 2016, pp. 843–850, doi: <a href="https://doi.org/10.1145/2984511.2984574" target="_blank" class="text-decoration-none">10.1145/2984511.2984574</a>.<br>
+              [2] X. Fernández-Fuentes, D. Mera, A. Gómez, and I. Vidal-Franco, "Towards a Fast and Accurate EIT Inverse Problem Solver: A Machine Learning Approach," <em>Electronics</em>, vol. 7, no. 12, Art. no. 422, 2018, doi: <a href="https://doi.org/10.3390/electronics7120422" target="_blank" class="text-decoration-none">10.3390/electronics7120422</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>
+

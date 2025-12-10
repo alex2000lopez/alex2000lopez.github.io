@@ -1,0 +1,117 @@
+{
+    "projects": [
+        {
+            "id": "murmurations",
+            "name": "Murmurations",
+            "category": "human-augmentation",
+            "year": 2025,
+            "image": "assets/images/projects/cards/murmurations.png",
+            "shortDescription": "A wearable silent speech interface that decodes facial micromovements into text in real time to restore communication for people with speech impairments.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/murmurations.html"
+                }
+            ]
+        },
+        {
+            "id": "weareit",
+            "name": "WearEIT",
+            "category": "human-augmentation",
+            "year": 2025,
+            "image": "assets/images/projects/cards/WearEIT.png",
+            "shortDescription": "An EIT-based wearable device for real-time hand gesture recognition and control of upper-limb prostheses.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/wearEIT.html"
+                }
+            ]
+        },
+        {
+            "id": "tailor",
+            "name": "Tailor",
+            "category": "human-augmentation",
+            "year": 2025,
+            "image": "assets/images/projects/cards/tailor.png",
+            "shortDescription": "A low-power wireless wearable device to facilitate autonomous insulin dosing for diabetic patients in a HW-in-the-loop fashion.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/tailor.html"
+                }
+            ]
+        },
+        {
+            "id": "haptic-hearing",
+            "name": "HapticHearing",
+            "category": "human-augmentation",
+            "year": 2024,
+            "image": "assets/images/projects/cards/haptichearing.png",
+            "shortDescription": "PCB redesign for Sam Chin's HapticHearing project: a 4.6× smaller, USB-C powered haptic driver for multi actuator speech augmentation.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/haptic-hearing.html"
+                }
+            ]
+        },
+        {
+            "id": "x-mods",
+            "name": "X-MODs",
+            "category": "electronics",
+            "year": 2025,
+            "image": "assets/images/projects/cards/x-mods.png",
+            "shortDescription": "A modular hardware platform based on the RISC-V X-HEEP family for the creation of ultra-low-power wearable devices for clinical and research use.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/x-mods.html"
+                }
+            ]
+        },
+        {
+            "id": "gsrmonitor",
+            "name": "GSRmonitor",
+            "category": "electronics",
+            "year": 2025,
+            "image": "assets/images/projects/cards/gsrmonitor.png",
+            "shortDescription": "A validation platform for a Galvanic Skin Response (GSR) SoC for real time stress and fear monitoring in high risk situations.",
+            "links": [
+                {
+                    "type": "detail",
+                    "label": "Details",
+                    "icon": "link",
+                    "url": "projects/gsrmonitor.html"
+                }
+            ]
+        }
+    ],
+    "talks": [
+        {
+            "id": "iwosmor-2022",
+            "name": "International Workshop on Sensors and Molecular Recognition (IWOSMOR) 2022",
+            "date": "2022",
+            "role": "Speaker",
+            "description": "Design and development of a wearable EIT system for real-time hand gesture recognition using machine learning",
+            "links": [
+                {
+                    "type": "external",
+                    "label": "View Programme",
+                    "icon": "link",
+                    "url": "https://www.uv.es/uvweb/interuniversity-research-institute-molecular-recognition-technological-development/en/conferences/iwosmor/iwosmor-xv-2022/index-scientific-program-1286408763289.html"
+                }
+            ]
+        }
+    ]
+}

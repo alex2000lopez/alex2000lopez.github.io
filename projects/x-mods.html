@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="X-MODs: A modular hardware platform based on the RISC-V X-HEEP family for ultra-low-power wearable devices for clinical and research use.">
+  <meta name="author" content="Alex Lopez">
+  <title>X-MODs - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">X-MODs</h1>
+        <p class="lead text-muted">A modular hardware platform based on the RISC-V X-HEEP family for ultra-low-power wearable devices for clinical and research use.</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/x-mods.png"
+               alt="X-MODs modular platform"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>X-MODs is a modular hardware platform built around <a href="#references" class="text-decoration-none">X-HEEP</a> [1], a custom ultra-low-power RISC-V SoC developed at the Embedded Systems Laboratory (ESL) at EPFL. The platform enables different wearable device configurations for real-time monitoring of epilepsy and other neurological diseases, without having to redesign the full stack for every new prototype.</p>
+
+            <p>Instead of a single all-in-one board, the system is split into four modules that cover the typical building blocks of a wearable device: SoC/MCU, power management, high resolution data acquisition and non-volatile storage. Each module is roughly 15 mm wide and can be combined as needed, allowing different device configurations to be assembled quickly while keeping the final form factor close to what a tailored wearable would require.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Platform Architecture</h3>
+            <p>The X-MODs family is organized around four core modules and their corresponding socket boards:</p>
+            <ul>
+              <li><strong>CHEEP module:</strong> hosts the HEEPocrates RISC-V SoC from the X-HEEP family, with UART, I<sup>2</sup>C and SPI interfaces exposed for peripherals and external sensors.</li>
+              <li><strong>Power module:</strong> integrates a high efficiency PMIC with LiPo charging, five independent regulated rails and an on board coulomb counter for accurate battery monitoring.</li>
+              <li><strong>ADC module:</strong> a 16 bit, 1 MSPS data acquisition front end with four multiplexed input channels, optimized for biosignal acquisition.</li>
+              <li><strong>Memory module:</strong> dual NOR flash configuration with pin compatible footprints for different densities, intended for long term autonomous data logging.</li>
+            </ul>
+
+            <p>All modules feature castellated edges, making it possible to start with a breadboard based prototype and then transition the same blocks into a rigid flex or custom PCB layout later on. To simplify fabrication, all modules are designed as 6 layer PCBs and panelized together into a single manufacturing panel, as shown in <a href="#figure-1" class="text-decoration-none">Figure 1</a>.</p>
+
+            <!-- X-MODs modules -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/X-MODs/X-MODs_panel.jpg"
+                    alt="Figure 1: X-MODs modules"
+                    class="img-fluid rounded shadow mx-auto d-block"
+                    style="max-width: 100%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 1: X-MODs panelized for fabrication.</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Socket Boards and Prototyping</h3>
+            <p>To simplify early development, each module has a companion socket board with spring loaded pogo pins. These socket boards expose the module pins in a breadboard compatible footprint, which allows modules to be plugged in and removed without soldering and makes it easy to swap different revisions while keeping the rest of the setup unchanged, as shown in <a href="#figure-2" class="text-decoration-none">Figure 2</a> and <a href="#figure-3" class="text-decoration-none">Figure 3</a>. This lets researchers at ESL reuse the same building blocks for different clinical prototypes while keeping their own application specific circuitry separate.</p>
+
+            <!-- Power module socket board -->
+            <div id="figure-2" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/X-MODs/X_MODs_Power_board_flexypin.png"
+                    alt="Figure 2: Power module socket board"
+                    class="img-fluid rounded shadow mx-auto d-block"
+                    style="max-width: 70%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 2: Power module socket board.</small>
+                </p>
+              </div>
+            </div>
+
+            <!-- CHEEP module socket board -->
+            <div id="figure-3" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img src="../assets/images/projects/X-MODs/X_MODs_CHEEP_board_flexypin.png"
+                    alt="Figure 3: CHEEP module socket board"
+                    class="img-fluid rounded shadow mx-auto d-block"
+                    style="max-width: 50%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3: CHEEP module socket board.</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Applications</h3>
+            <p>The platform was originally developed to support real-time monitoring of epilepsy and other neurological diseases, where devices need to be small, low power and robust enough for long term use in clinical trials. More broadly, the modules are suited for any wearable healthcare application that needs high resolution data acquisition, local processing and reliable storage in a constrained form factor.</p>
+
+            <div id="references" class="mt-5 pt-4 border-top">
+              <h3 class="h4 fw-bold mb-3">References</h3>
+              <p class="mb-3">
+                [1] S. Machetti et al., "X-HEEP: An Open-Source, Configurable and Extendible RISC-V Microcontroller for the Exploration of Ultra-Low-Power Edge Accelerators," arXiv preprint arXiv:2401.05548, 2024. Available: <a href="https://arxiv.org/abs/2401.05548" target="_blank" class="text-decoration-none">https://arxiv.org/abs/2401.05548</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

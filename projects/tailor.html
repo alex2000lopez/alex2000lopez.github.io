@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tailor: A low-power wireless wearable device to facilitate autonomous insulin dosing for diabetic patients in a HW-in-the-loop fashion">
+  <meta name="author" content="Alex Lopez">
+  <title>Tailor - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">Tailor</h1>
+        <p class="lead text-muted">A low-power wireless wearable device to facilitate autonomous insulin dosing for diabetic patients in a hardware-in-the-loop fashion.</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/tailor.png"
+               alt="Tailor"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>Tailor is a low-power wrist-worn device aimed at individuals with type 1 diabetes who rely on an insulin pump and continuous glucose monitoring. It is designed as a hardware-in-the-loop wearable that learns from everyday behavior and provides preemptive insulin support, rather than forcing users to micromanage every meal and activity to control their glucose levels.</p>
+
+            <p>The device combines IMU sensing, photoplethysmography (PPG), and skin temperature with embedded AI models to estimate the timing and approximate size of meals, detect unannounced exercise, and track slow physiological changes such as menstrual cycle related shifts in insulin sensitivity, which are known to affect glucose regulation in women. These estimates are then fed into closed-loop control algorithms, either to suggest the injection of insulin boluses and corrections to the user or to drive autonomous insulin dosing in simulation.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Clinical Motivation</h3>
+            <p>Even with the arrival of commercial hybrid closed-loop systems, many people with type 1 diabetes still struggle to keep their glucose in range and to feel that the technology is working for them. Real-world studies have shown that some users abandon artificial pancreas systems after a few months because they find them rigid, demanding, or poorly aligned with their lifestyle. In practice, patients differ widely in how much interaction they want with their devices, how they manage meals and exercise, and how comfortable they are wearing multiple wearables at all times.</p>
+
+            <p>On top of this, there is growing evidence that sex and gender affect the pathophysiology of diabetes, the incidence of complications, and the response to treatment. Differences in body composition, hormones, and lifestyle lead to different glucose dynamics in women and men, and women often report a more challenging experience managing glucose due to menstrual cycle related fluctuations in insulin sensitivity. These differences are rarely reflected in current control algorithms.</p>
+
+            <p>Within this context, Tailor serves as an experimental platform to prototype new decision support strategies that are flexible enough to adapt to different users and explicitly account for sex specific effects. For women, Tailor aims to provide on-body sensing that can track menstrual cycle phases in real time and integrate this information into insulin dosing strategies. For all users, the goal is to ease the burden of meal and exercise management without compromising safety.</p>
+
+            <!-- Menstrual cycle and physiology Image -->
+            <div id="figure-2" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/tailor/tailor_wristband.jpg"
+                  alt="Figure 2: Closeup view of the Tailor wearable device"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 80%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 2: Closeup view of the Tailor wearable device.</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">System Architecture</h3>
+            <p>Tailor is implemented as a smartwatch style wearable that acts as a companion to an insulin pump and Continuous Glucose Monitoring (CGM) system. It is designed to be worn on the wrist and features a 1.14 inch TFT display, a haptic motor for vibrotactile feedback, and a physical pushbutton for user interaction. The device is charged through a magnetic connector to simplify daily use and avoid exposing mechanical connectors to sweat and dust.</p>
+
+            <p>The sensing front end includes a 6-DoF inertial measurement unit (IMU) used to detect arm movements related to eating, drinking, and exercise, as well as overall activity levels. A multi wavelength PPG sensor provides heart rate, heart rate variability, and blood pressure information, which, combined with a high resolution skin temperature sensor (0.1 ºC accuracy), enables continuous tracking of circadian patterns and slow drifts in basal temperature. These signals can be used to infer menstrual cycle phases in women and other physiological changes that affect glucose regulation.</p>
+
+            <p>At the core of the device, an STM32WB55 microcontroller runs on-edge AI models for meal detection, activity classification, and menstrual phase estimation. Through Bluetooth Low Energy (BLE) communication, it can stream raw or processed sensor data to a phone and communicate with an insulin pump and CGM system for autonomous insulin dosing.</p>
+
+            <!-- Block diagram Image -->
+            <div id="figure-3" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/Tailor/tailor_block_diagram.svg"
+                  alt="Figure 3: Block diagram of the Tailor wearable device"
+                  class="img-fluid rounded shadow"
+                  style="width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3: Block diagram of the Tailor wearable device.</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Implementation</h3>
+            <p>To keep the device practical for everyday use, the hardware is designed from the ground up with ultra low power operation in mind. To this end, the STM32WB55 microcontroller was selected owing to its low active mode power consumption of 53 μA/MHz.</p>
+
+            <p>By the same token, the device is designed to be minimally invasive, with a small form factor and a lightweight design, with the PCB measuring only 35 x 18 mm. To achieve this, the device has been implemented as a 6-layer HDI PCB. As <a href="#figure-4" class="text-decoration-none">Figure 4</a> shows, the board is the same size as the 1.14 inch TFT display it uses to present information to the user. In order to add extra functionality without requiring a full system redesign, a modular approach was followed in which an additional flexible PCB connects to the main PCB through an FPC connector.</p>
+
+            <!-- PCB Front and Back Images -->
+            <div id="figure-4" class="row g-4 my-5">
+              <div class="col-md-6 text-center">
+                <img
+                  src="../assets/images/projects/tailor/tailor_pcb_front.jpeg"
+                  alt="Figure 4a: Front view of the Tailor wearable device PCB"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 4a: Front view of the Tailor wearable device PCB.</small>
+                </p>
+              </div>
+              <div class="col-md-6 text-center">
+                <img
+                  src="../assets/images/projects/tailor/tailor_pcb_back.jpeg"
+                  alt="Figure 4b: Back view of the Tailor wearable device PCB"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="width: 100%;"
+                >
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 4b: Back view of the Tailor wearable device PCB.</small>
+                </p>
+              </div>
+            </div>
+
+            <p>In addition, care was taken to minimize standby power consumption, since many users remove their device overnight or during activities where it is not needed. In deep sleep, Tailor draws less than 10 µW thanks to a combination of deep sleep modes and peripheral power gating. Similarly, in active mode, with the screen off, the device draws less than 10 mW. The wearable also features a pushbutton on/off controller which can fully power down the device when not in use, enabling a travel or storage mode for extended periods of inactivity.</p>
+
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

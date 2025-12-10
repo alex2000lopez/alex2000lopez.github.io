@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Murmurations: A wearable silent speech interface that decodes facial micromovements into text in real time using piezoelectric sensors and adapted ASR models.">
+  <meta name="author" content="Alex Lopez">
+  <title>Murmurations - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">Murmurations</h1>
+        <p class="lead text-muted">A low power wearable Silent Speech Interface that uses piezoelectric sensors on the face to turn jaw and lip micromovements into text in real time for people who can no longer rely on their voice.</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/murmurations.png"
+               alt="Murmurations Silent Speech Interface"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>Murmurations is a low power wearable Silent Speech Interface that uses piezoelectric force sensors on the face to capture jaw and lip micromovements and map them to text using adapted automatic speech recognition models. It is aimed at people who can no longer rely on their voice after a stroke, surgery or neurodegenerative disease.</p>
+
+            <p>Instead of recording audible speech, the device senses how the skin and muscles around the mouth and jaw move when a person mouths words. Piezoelectric sensors, embedded in a conformal mask that can be tailored to each user via 3D scanning, capture these deformations, as shown in <a href="#figure-1" class="text-decoration-none">Figure 1</a>. The project builds on Automatic Speech Recognition (ASR) models that were originally designed for audio to map the sensor data to text, enabling truly silent communication.</p>
+
+            <!-- Form factor Images -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-12 d-flex flex-wrap justify-content-center align-items-start" style="gap: 1rem;">
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/murmurations/murmurations_front_zoom_in.png"
+                    alt="Figure 1a: Closeup view of the Murmurations device showing the mask and the gasket fit."
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 1a: Closeup view of the Murmurations device.</small>
+                  </p>
+                </div>
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/murmurations/murmurations_side_gasket_fit.png"
+                    alt="Figure 1b: Side view of Murmurations device"
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 1b: Side view of the Murmurations gasket fit.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <h3 class="h4 fw-bold mt-5 mb-3">Motivation and Context</h3>
+            <p>Silent Speech Interfaces sit at the intersection of assistive technology and human computer interaction. They are particularly relevant for people who cannot rely on their voice after stroke, surgery or neurodegenerative disease, but also for situations where speaking out loud is not possible or desirable, such as noisy environments, shared spaces or privacy sensitive contexts.</p>
+
+            <p>Most existing systems rely on electrically-based sensing such as surface EMG or EEG. While powerful in the lab, these approaches often suffer from low signal to noise ratio, sensitivity to both external noise and changes in ambient conditions. Mechanical sensing methods, such as strain and force sensors, have recently been shown to capture articulatory motion more robustly with simpler hardware. Murmurations builds on this line of work by exploring commercially available piezoelectric sensors as the primary sensing modality.</p>
+
+            <p>From a modeling perspective, the project is also a testbed for bringing modern audio ASR architectures to a new sensing modality. In particular, it aims to explore the Zipformer model architecture <a href="#references" class="text-decoration-none">[1]</a>, which has proved to be effective for audio based speech recognition on constrained platforms such as mobile phones and wearables, and apply it to the task of speech recognition from facial micromovements. Zipformer transcribes audio to text by predicting phoneme sequences, which allows the system to handle virtually any word or sentence and naturally extend to multiple languages.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">System Architecture</h3>
+
+            <p>The device currently uses two piezoelectric sensors, one positioned under the lip on the chin and the other near the corner of the mouth on the cheek, a configuration that captures complementary movements from speech articulation. The sensors connect to a high resolution 24-bit ADC, which samples the signals at 8 kHz before sending them to an ESP32-S3 microcontroller. The ESP32 performs basic digital filtering and streams the data to a host computer or phone over WiFi. For preliminary experiments, an I2S microphone is used to record audio in parallel. The audio is not used during inference, but it provides a reference for aligning sensor data with the spoken transcription in non-self-aligned machine learning models. The complete system architecture is shown in <a href="#figure-2" class="text-decoration-none">Figure 2</a>.</p>
+
+            <!-- Block diagram Image -->
+            <div id="figure-2" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/murmurations/murmurations_block_diagram.png"
+                  alt="Figure 2: Block diagram of the Murmurations system"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 100%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 2: Block diagram of the Murmurations system, from facial micromovements to sensor front end, embedded platform and ASR based decoder.</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Wearable Design</h3>
+
+            <p>To mount the piezoelectric sensors on the face and host the electronics, the device is implemented as a hollow wearable mask. The mask is 3D printed in hard plastic and houses both the sensors and the electronics, as shown in <a href="#figure-3" class="text-decoration-none">Figure 3</a>.</p>
+                
+            <!-- Mask Image -->
+            <div id="figure-3" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/murmurations/murmurations_3d_printed_mask.jpeg"
+                  alt="Figure 3: 3D printed hollow mask"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 50%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 3: 3D printed hollow mask.</small>
+                </p>
+              </div>
+            </div>
+                
+            <p>The mask is designed to be comfortable to wear for extended periods of time, thanks to a soft silicone gasket that fits snugly around the face and can be tailored to each user via 3D scanning and custom molding. A 3D printed mold is used to cast the silicone gasket directly into the mask, as shown in <a href="#figure-4" class="text-decoration-none">Figure 4</a>. The rigid shell contains several cavities that are filled with silicone to create the gasket and keep it in place.</p>
+
+            <!-- Mask Images -->
+            <div id="figure-4" class="row g-4 my-5">
+              <div class="col-12 d-flex flex-wrap justify-content-center align-items-start" style="gap: 1rem;">
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/murmurations/murmurations_3d_printed_mold.jpeg"
+                    alt="Figure 4a: 3D printed mold for the silicone gasket"
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 4a: 3D printed mold for the silicone gasket.</small>
+                  </p>
+                </div>
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/murmurations/murmurations_cast_mask.png"
+                    alt="Figure 4b: Cast mask with silicone gasket and embedded piezoelectric sensors"
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 4b: Cast mask with silicone gasket and embedded piezos.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <p>By casting the silicone gasket into the mask, the piezoelectric sensors are embedded into the gasket, as depicted in <a href="#figure-4" class="text-decoration-none">Figure 4</a>. This creates a better mechanical impedance match between the face and the device, which minimizes signal loss due to piezo saturation and improves the overall performance of the system.</p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Machine Learning Pipeline</h3>
+
+            <p>The machine learning pipeline for Murmurations is based on the Zipformer model architecture <a href="#references" class="text-decoration-none">[1]</a>, which has shown strong performance for audio based speech recognition. The model takes a sequence of MEL spectrograms as input, together with the audio transcription of the corresponding recording, and outputs a string of text. By leveraging this architecture, the recorded data does not need to be manually aligned; only the transcription of each recording is required.</p>
+
+            <p>However, training a Zipformer based model typically requires several hundred hours of sensor data. Since the project is still in its early stages, we first validated the idea using a simplified model consisting of a 1D-ResNet that operates on fixed length segments. Because this model is not self-aligned, we use the Short-Time-Energy of the audio recorded in parallel to locate speech segments and align the sensor data with the corresponding transcription, as shown in <a href="#figure-5" class="text-decoration-none">Figure 5</a>.</p>
+                
+            <!-- Short-Time-Energy Image -->
+            <div id="figure-5" class="row g-4 my-5">
+                <div class="col-md-12 text-center">
+                  <img
+                    src="../assets/images/projects/murmurations/murmurations_STE.png"
+                    alt="Figure 5: Short-Time-Energy of the audio recorded in parallel to the sensor data"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 5: Short-Time-Energy of the audio recorded in parallel to the sensor data.</small>
+                  </p>
+                </div>
+              </div>
+
+            <p>On a biphonemic vocabulary consisting of 42 homophonic words, this setup reaches around <strong>97.1% classification accuracy</strong> when processing both ADC channels jointly, and recording around 50 instances of each word with a 70%-15%-15% split into training, validation and test sets, as shown in <a href="#figure-6" class="text-decoration-none">Figure 6</a>.</p>
+
+            <!-- Confusion matrix Image -->
+            <div id="figure-6" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/murmurations/murmurations_confusion_matrix_1D_resnet.png"
+                  alt="Figure 6: Confusion matrix of the 1D ResNet classifier over 42 homophonic words."
+                  class="img-fluid rounded shadow"
+                  style="max-width: 80%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 6: Confusion matrix of the 1D ResNet classifier over 42 homophonic words.</small>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- References Section -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div id="references" class="mt-5 pt-4 border-top">
+            <h3 class="h4 fw-bold mb-3">References</h3>
+            <p class="mb-3">
+              [1] Z. Yao, L. Guo, X. Yang, W. Kang, F. Kuang, Y. Yang, Z. Jin, L. Lin, and D. Povey, "Zipformer: A faster and better encoder for automatic speech recognition," <em>arXiv preprint arXiv:2310.11230</em>, 2024. [Online]. Available: <a href="https://arxiv.org/abs/2310.11230" target="_blank" class="text-decoration-none">https://arxiv.org/abs/2310.11230</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

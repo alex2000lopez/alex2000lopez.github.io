@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hardware redesign for HapticHearing: a more compact, USB-C powered PCB stack for a multi-actuator haptic speech augmentation system.">
+  <meta name="author" content="Alex Lopez">
+  <title>HapticHearing - Alex Lopez</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../custom.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Alex Lopez" width="64" height="64" class="me-2">
+        Alex Lopez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#talks">Talks & Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main style="padding-top: 60px;">
+    <article class="container py-5">
+      <!-- Back Link -->
+      <div class="mb-4">
+        <a href="../index.html#projects" class="text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          Back to Projects
+        </a>
+      </div>
+
+      <!-- Project Header -->
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">HapticHearing</h1>
+        <p class="lead text-muted">PCB redesign for Sam Chin's HapticHearing project: a 4.6× smaller, USB-C powered haptic driver for multi actuator speech augmentation.</p>
+      </header>
+
+      <!-- Hero Images -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-12 text-center">
+          <img src="../assets/images/projects/cards/haptichearing.png"
+               alt="HapticHearing"
+               class="img-fluid rounded shadow"
+               style="max-width: 60%;">
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="project-description">
+            <p class="text-muted mb-4"><small>Work done at MIT Media Lab, Responsive Environments group, under the supervision of Sam Chin.</small></p>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Project Overview</h3>
+            <p>
+              <a href="https://dl.acm.org/doi/10.1145/3663547.3759754" target="_blank" class="text-decoration-none">HapticHearing</a> is a haptic speech augmentation system developed by <a href="https://www.media.mit.edu/people/chins/overview/" target="_blank" class="text-decoration-none">Sam Chin</a> and collaborators at the MIT Media Lab. The system maps speech features onto spatiotemporal vibration patterns delivered through wearable multi actuator devices, with the goal of complementing residual hearing rather than replacing it.
+            </p>
+            <p>
+              My contribution focuses on the hardware layer. Though the original prototype board was well suited for early lab experiments, its size and power interface made it difficult to integrate into compact wearables and to deploy outside the lab. The new design achieves a 4.6× smaller footprint and powers the system through USB C PD, making it easier to integrate into compact wearables and to deploy outside the lab.
+            </p>
+
+            <!-- Comparison Image: Old vs New -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-md-12 text-center">
+                <img
+                  src="../assets/images/projects/haptichearing/HapticHearing_PCB_comparison.png"
+                  alt="Figure 1: Comparison between the original HapticHearing PCB and the redesigned version"
+                  class="img-fluid rounded shadow mx-auto d-block"
+                  style="max-width: 80%;">
+                <p class="text-muted mt-3 mb-0">
+                  <small>Figure 1: Original HapticHearing prototype board (left) and redesigned version (right).</small>
+                </p>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Redesign Goals</h3>
+            <p>The hardware redesign had three main objectives:</p>
+            <ul>
+              <li>Reduce the overall PCB area to better match the size of the HapticHearing actuator array .</li>
+              <li>Implement USB-C Power Delivery (5V up to 3A), replacing the USB-B connector (5V up to 0.5A) and external power input required due to the larger power requirements of the new board.</li>
+              <li>Replace the original single channel audio amplifiers with stereo audio amplifiers to reduce the size and cost of the board.</li>
+            </ul>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">New Board Architecture</h3>
+            <p>
+              The new hardware is based on the CM6206, a 7.1 audio USB 2.0 controller, which paired with dual class ABaudio amplifiers, can control up to 8 haptic motors in parallel. An ultra-high PSRR LDO is used to power the audio amplifiers, ensuring that noise from the USB bus does not propagate to the haptic motor output.
+            </p>
+
+            <!-- Form factor Images -->
+            <div id="figure-1" class="row g-4 my-5">
+              <div class="col-12 d-flex flex-wrap justify-content-center align-items-start" style="gap: 1rem;">
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/haptichearing/HapticHearing_PCB_front.png"
+                    alt="Figure 2a: Front view of the new HapticHearing PCB"
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 2a: Front view of the new HapticHearing PCB.</small>
+                  </p>
+                </div>
+                <div class="text-center" style="flex: 0 1 auto; display: flex; flex-direction: column;">
+                  <img
+                    src="../assets/images/projects/haptichearing/HapticHearing_PCB_back.png"
+                    alt="Figure 2b: Back view of the new HapticHearing PCB"
+                    class="rounded shadow"
+                    style="height: 300px; width: auto; display: block;">
+                  <p class="text-muted mt-3 mb-0">
+                    <small>Figure 2b: Back view of the new HapticHearing PCB.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3">Role and Status</h3>
+            <p>
+              I am responsible for the schematic capture, PCB layout and bring up of the new boards. The redesigned hardware is currently being integrated into the next iteration of HapticHearing. 
+            </p>
+
+            <div class="mt-5 pt-4 border-top">
+              <p class="mb-2">
+                For details on the original HapticHearing system, please refer to the ASSETS 2025 paper:
+              </p>
+              <p class="mb-3">
+                <a href="https://dl.acm.org/doi/10.1145/3663547.3759754" target="_blank" class="text-decoration-none">
+                  HapticHearing: A Haptic Feedback System for Complementing Speech Perception
+                </a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-muted mb-0">&copy; <span class="copyright-year">2025</span> Alex Lopez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+  <!-- Update copyright year -->
+  <script>
+    document.querySelectorAll('.copyright-year').forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+/* Custom CSS - Plain Bootstrap Version */
+
+/* CSS Variables for theming */
+:root {
+  --font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body-color: #2c3e50;
+  --body-bg: #ffffff;
+  --primary: #2c3e50;
+  --secondary: #95a5a6;
+  --link-color: #3498db;
+  --link-hover-color: #2980b9;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  color: var(--body-color);
+  line-height: 1.7;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+  min-height: 70px;
+  height: 70px;
+  transition: all 0.3s ease;
+  /* Prevent visual flash during page transitions */
+  will-change: auto;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Ensure navbar is always visible during page load */
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  line-height: 64px;
+  font-weight: 600;
+  color: var(--primary);
+  /* Prevent layout shift */
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar .navbar-brand img {
+  /* Prevent image loading flash */
+  display: block;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: var(--body-color);
+  padding: 0.5rem 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--link-color);
+}
+
+/* Section spacing */
+section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Hero/About Section */
+.hero-about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.profile-photo-wrapper {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.social-links .btn {
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 992px) {
+  .hero-about-section {
+    padding-top: 5rem;
+  }
+
+  .bio-content {
+    margin-left: 3rem;
+  }
+}
+
+.bio-content p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.bio-content a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.bio-content a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.bio-content .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--body-color);
+}
+
+.research-interests {
+  list-style: none;
+  padding-left: 0;
+}
+
+.research-interests li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.research-interests li:before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+/* Scroll indicator */
+.scroll-indicator .scroll-arrow {
+  animation: bounce 2s infinite;
+  display: inline-block;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  background-color: #ffffff;
+}
+
+.filter-buttons .btn-filter {
+  margin: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  color: var(--body-color);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn-filter:hover {
+  border-color: var(--link-color);
+  color: var(--link-color);
+  transform: translateY(-2px);
+}
+
+.filter-buttons .btn-filter.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Project Cards */
+.project-card .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-card .card .card-img-top {
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.project-card .card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card .card-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.project-card .card .card-text {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Project links with icons */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  row-gap: 0.25rem;
+  align-items: center;
+  margin-top: auto;
+  line-height: 1.2;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  padding: 0.1rem 0;
+  line-height: 1.2;
+}
+
+.project-links a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.project-links a svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.project-links .link-separator {
+  color: #dee2e6;
+  font-weight: 300;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Talks Section */
+.talks-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.talks-section .card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.talks-section .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.talks-section .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.talks-section .card .card-text {
+  flex-grow: 1;
+}
+
+.talks-section .card .btn {
+  margin-top: auto;
+}
+
+.talks-section .card .badge {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.contact-section .contact-links .btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--link-color) !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+  color: var(--link-color);
+  border-color: var(--link-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--link-color);
+  border-color: var(--link-color);
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .hero-about-section {
+    padding-top: 4.5rem;
+  }
+
+  .profile-photo-wrapper {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  h1.display-4 {
+    font-size: 2rem;
+  }
+
+  .filter-buttons .btn-filter {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
