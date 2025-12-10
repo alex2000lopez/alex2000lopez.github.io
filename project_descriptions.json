@@ -21,7 +21,7 @@
             "name": "WearEIT",
             "category": "human-augmentation",
             "year": 2025,
-            "image": "assets/images/projects/cards/WearEIT.png",
+            "image": "assets/images/projects/cards/wearEIT.png",
             "shortDescription": "An EIT-based wearable device for real-time hand gesture recognition and control of upper-limb prostheses.",
             "links": [
                 {
@@ -69,7 +69,7 @@
             "name": "X-MODs",
             "category": "electronics",
             "year": 2025,
-            "image": "assets/images/projects/cards/x-mods.png",
+            "image": "assets/images/projects/cards/X-MODs.png",
             "shortDescription": "A modular hardware platform based on the RISC-V X-HEEP family for the creation of ultra-low-power wearable devices for clinical and research use.",
             "links": [
                 {
@@ -85,7 +85,7 @@
             "name": "GSRmonitor",
             "category": "electronics",
             "year": 2025,
-            "image": "assets/images/projects/cards/gsrmonitor.png",
+            "image": "assets/images/projects/cards/GSRmonitor.png",
             "shortDescription": "A validation platform for a Galvanic Skin Response (GSR) SoC for real time stress and fear monitoring in high risk situations.",
             "links": [
                 {

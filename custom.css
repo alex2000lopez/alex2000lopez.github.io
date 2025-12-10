@@ -61,6 +61,15 @@ body {
   width: 64px;
   height: 64px;
   flex-shrink: 0;
+  /* Ensure proper scaling */
+  object-fit: contain;
+  /* Force hardware acceleration for better rendering */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Improve rendering quality - use smooth interpolation for better quality */
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
 }
 
 .navbar .nav-link {
